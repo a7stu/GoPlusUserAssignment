@@ -1,6 +1,7 @@
 # User Database Assignment
 
 The goal was to create a basic application using HTML, CSS and JavaScript that can perform the following operations:
+
 =>  View List of all Users
 =>  Add a User
 =>  Edit & Update a User 
@@ -13,3 +14,6 @@ The application form must has the following fields : name, email, date of birth,
 
 # The 2nd entry is deleted and the screenshot shows how the 1st entry can be edited
 ![Screenshot 2023-02-22 232927](https://user-images.githubusercontent.com/93438794/220752238-552c4bcf-99ae-4969-9c3d-49bfe9706917.png)
+
+# The 1st entry is now updated
+![snap](https://user-images.githubusercontent.com/93438794/220753351-3a1ba54d-272e-4dc2-9f1f-14b556d606fd.png)
