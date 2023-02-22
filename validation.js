@@ -131,7 +131,7 @@ function finishEdit(user) {
 
     err = 0;
 
-    checkRequired([fname, email, dob, hobby, country, state, city], form);
+    checkRequired(form);
 
     let selector = user.parentElement.parentElement.parentElement;
 
@@ -182,7 +182,7 @@ function addUser() {
 API token for getting the list of countries, states and cities: ek3IrQzvwS-JqgA8ycbcrBsmfaWBwVCJFGNUiORPaw1XCnnOYwSz5jfyod0CGDB8UB4
 
 IMPORTANT: token expires after 24 hours for security reasons. if that happens, visit https://www.universal-tutorial.com/rest-apis/free-rest-api-for-country-state-city
-and type in your email to get a fresh new token. then follow these steps to get the authorization token*/
+and type in your email to get a fresh new token. then follow these steps to get the authorization token
 fetch('https://www.universal-tutorial.com/api/getaccesstoken', {
   method: "GET",
   headers: {
@@ -195,6 +195,7 @@ fetch('https://www.universal-tutorial.com/api/getaccesstoken', {
 .then(json => console.log(json))
 .catch(err => console.log(err));
 
+*/
 
 // fetches all the countries and adds them as options in the Country dropdown menu
 fetch('https://www.universal-tutorial.com/api/countries/', {
@@ -219,6 +220,7 @@ country.onchange = function() {
     fetch(`https://www.universal-tutorial.com/api/states/${country.value}`, {
     method: "GET",
     headers: {
+        // NOTE: the authorization token needs to be replaced after 24 hours for security reasons
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJ0ZWhzaW4uc2hlcmFzaXlhQGdtYWlsLmNvbSIsImFwaV90b2tlbiI6ImVrM0lyUXp2d1MtSnFnQTh5Y2JjckJzbWZhV0J3VkNKRkdOVWlPUlBhdzFYQ25uT1l3U3o1amZ5b2QwQ0dEQjhVQjQifSwiZXhwIjoxNjc3MTgzODk2fQ.SGng3_dXllL-vhwSepPgqXaldB54DmiPYwoC2gP7dio",
         "Accept": "application/json"
     }
