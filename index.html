@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+
+    <h1 class="form-title">List of Users</h1>
+
+    <table id="table">
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>DoB</th>
+            <th>Gender</th>
+            <th>Hobby</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <div class="container">
+        <form id="form" class="form">
+    
+            <h1>Add User</h1>
+    
+            <div class="form-subdiv">
+                <label for="name">Full Name</label>
+                <input type="text" id="name">
+                <small>Error Message</small>
+            </div>
+    
+            <div class="form-subdiv">
+                <label for="email">Email</label>
+                <input type="text" id="email">
+                <small>Error Message</small>
+            </div>
+    
+            <div class="form-subdiv">
+                <label for="birthday">Date of Birth</label>
+                <input type="date" id="birthday" min='1950-01-01'>
+                <small>Error Message</small>
+            </div>
+    
+            <div class="form-subdiv">
+                <label for="gender" id="gender">Gender</label>
+                <div class="btnlabel">
+    
+                    <div class="btnradio">
+                    <input type="radio" name="gender" value="Male">Male
+                    </div>
+    
+                    <div class="btnradio">
+                    <input type="radio" name="gender" value="Female">Female
+                    </div>
+    
+                <small>Error Message</small>
+    
+                </div>
+            </div> 
+    
+            <div class="form-subdiv">
+                <label for="hobby">Hobbies</label>
+                <input type="text" id="hobby">
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-subdiv">
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option value="" selected="selected"></option>
+                </select>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-subdiv">
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value="" selected="selected"></option>
+                </select>
+                <small>Error Message</small>
+            </div>
+
+            <div class="form-subdiv">
+                <label for="city">City</label>
+                <select name="city" id="city">
+                    <option value="" selected="selected"></option>
+                </select>
+                <small>Error Message</small>
+            </div>
+    
+            <button>Add</button>
+    
+        </form>
+    </div>
+
+  </body>
+
+  <script src="./validation.js"></script>
+
+</html>
